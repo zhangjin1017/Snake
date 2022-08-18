@@ -1,0 +1,68 @@
+//设置变量
+@bgColor: #b7d4a8;
+
+//清除默认样式
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font: bold 20px 'Courier';
+  //禁用默认的滚动条
+  overflow: hidden;
+}
+//设置主窗口的样式
+#main {
+  width: 360px;
+  height: 420px;
+  background-color: @bgColor;
+  margin: 100px auto;
+  border: solid 10px #000000;
+  border-radius: 40px;
+
+  //开启弹性盒模型
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  align-items: center;
+
+  #stage {
+    width: 304px;
+    height: 304px;
+    border: solid 2px black;
+    position: relative;
+    #snake {
+      & > div {
+        width: 10px;
+        height: 10px;
+        background-color: #000000;
+        border: solid 1px @bgColor;
+        position: absolute;
+      }
+    }
+    #food {
+      width: 10px;
+      height: 10px;
+      position: absolute;
+      left: 40px;
+      top: 40px;
+      // background-color: pink;
+      display:flex;
+      flex-flow: row wrap;
+      justify-content:space-between;
+      align-content:space-between;
+      & > div {
+        width: 4px;
+        height: 4px;
+        background-color: red;
+        transform: rotate(45deg);
+      }
+    }
+  }
+  #score-panel {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
