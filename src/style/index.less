@@ -10,14 +10,14 @@
 body {
   font: bold 20px 'Courier';
   //禁用默认的滚动条
-  overflow: hidden;
+  // overflow: hidden;
 }
 //设置主窗口的样式
 #main {
   width: 360px;
   height: 420px;
   background-color: @bgColor;
-  margin: 100px auto;
+  margin: 50px auto;
   border: solid 10px #000000;
   border-radius: 40px;
 
@@ -64,5 +64,26 @@ body {
     width: 300px;
     display: flex;
     justify-content: space-between;
+  }
+}
+
+#key{
+  div{
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+  }
+  span{
+    font-size:50px
+    
+  }
+  #up{
+    margin: 0 auto;
+  }
+  #left,#right{
+    margin: 0 auto;
+
   }
 }

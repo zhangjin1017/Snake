@@ -15,6 +15,15 @@ class GameController{
     }
     init(){
       document.addEventListener("keydown", this.keydownHandler.bind(this));
+      document.getElementById('up')!.addEventListener("click", ()=>{
+        this.direction = 'ArrowUp';});
+      document.getElementById('down')!.addEventListener("click", ()=>{
+        this.direction = 'ArrowDown';
+      });
+      document.getElementById('left')!.addEventListener("click", ()=>{
+        this.direction = 'ArrowLeft';});
+      document.getElementById('right')!.addEventListener("click", ()=>{
+        this.direction = 'ArrowRight';});
       this.run();
      
     }

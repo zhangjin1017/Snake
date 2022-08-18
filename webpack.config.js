@@ -62,7 +62,8 @@ module.exports = {
           },
           'less-loader',
         ],
-      }
+      },
+      { test: /\.(jpg|jpeg|png|svg)$/, loader: 'file-loader', options: { name: 'images/[hash].[ext]' } },
     ],
   },
   plugins: [
